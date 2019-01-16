@@ -48,12 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseContext.cs" />
+    <Compile Include="Migrations\201901161324171_InitialMigration.cs" />
+    <Compile Include="Migrations\201901161324171_InitialMigration.Designer.cs">
+      <DependentUpon>201901161324171_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\4 ED.ENTITIES\ED.ENTITIES\ED.ENTITIES.csproj">
+      <Project>{12948376-4053-4AEF-ADDD-8A7CE2583C9D}</Project>
+      <Name>ED.ENTITIES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901161324171_InitialMigration.resx">
+      <DependentUpon>201901161324171_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
